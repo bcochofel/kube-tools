@@ -7,6 +7,8 @@ ARG KUSTOMIZE_VERSION=5.4.3
 ARG HELM_VERSION=3.16.1
 ARG KUBE_SCORE_VERSION=1.18.0
 ARG KUBECONFORM_VERSION=0.6.7
+ARG KUBERNETES_VALIDATE_VERSION=1.30.0
+ARG YAMLLINT_VERSION=1.35.1
 ARG POLARIS_VERSION=9.3.0
 ARG TRIVY_VERSION=0.55.0
 ARG PRECOMMIT_VERSION=3.8.0
@@ -70,6 +72,12 @@ RUN curl -s -Lo kubeconform.tar.gz https://github.com/yannh/kubeconform/releases
 
 # install trivy
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v${TRIVY_VERSION}
+
+# install yamllint
+RUN pip3 install yamllint==${YAMLLINT_VERSION}
+
+# install kubernetes-validate
+RUN pip3 install kubernetes-validate==${KUBERNETES_VALIDATE_VERSION}
 
 # install pre-commit
 RUN pip3 install pre-commit==${PRECOMMIT_VERSION}
