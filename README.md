@@ -21,6 +21,8 @@ The container supports the following tools:
 - [helm](https://helm.sh/docs/intro/install/)
 - [kubeconform](https://github.com/yannh/kubeconform)
 - [kube-score](https://github.com/zegl/kube-score)
+- [kubernetes-validate](https://github.com/willthames/kubernetes-validate)
+- [yamllint](https://pypi.org/project/yamllint/)
 - [polaris](https://github.com/FairwindsOps/polaris)
 - [trivy](https://github.com/aquasecurity/trivy)
 - [pre-commit](https://pre-commit.com/)
